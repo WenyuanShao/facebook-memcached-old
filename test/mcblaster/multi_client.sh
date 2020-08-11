@@ -1,8 +1,8 @@
 #!/bin/bash
 
 killall mcblaster
-nodes=$1
-rate=$2
+nodes=600
+rate=100
 core=0
 total_core=32
 fp=11211
@@ -21,6 +21,6 @@ do
 	dp=$((dp+1))
 	core=$((core+1))
 	rate=$((rate*idx))
-	i=$((idx+1))
+	idx=$((idx+1))
 done
 echo "started all client"
