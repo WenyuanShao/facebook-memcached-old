@@ -244,6 +244,7 @@ stats_update_rtts(stats_t *st, uint64_t tsent, uint64_t treply, double cpufreq) 
 
   if (rtt < st->rtt_min)
     st->rtt_min = rtt;
+  printf("rtt: %llu ",rtt);
   if (rtt > st->rtt_max)
     st->rtt_max = rtt;
 
@@ -1622,7 +1623,7 @@ int main(int argc, char *argv[]) {
       die("pthread_join() failed with %d for thread #%i\n", i, errno);
   }
 
-  print_stats();
+  //print_stats();
 
   return 0;
 }
